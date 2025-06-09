@@ -4,44 +4,43 @@ import './Achievements.css';
 const careerMilestones = [
   {
     year: 2025,
-    title: "Olicyber National Finals",
-    description: "Qualified for the national cybersecurity competition finals, ranking among the top 100 high school students in Italy in the cybersecurity sector.",
+    title: "Olicyber2025 National Finals",
+    rank: "51st Place out of 2600",
+    description: "Qualified for the Olicyber2025 national finals, placing 51st out of 2600 high school competitors in Italy.",
     color: "#A78BFA",
-    isCurrent: true
+    isCurrent: false
   },
   {
     year: 2025,
     title: "PascalCTF Competition",
     rank: "107th Place",
-    description: "Competed in a cybersecurity challenge, showcasing technical skills and problem-solving abilities.",
+    description: "Competed in a cybersecurity challenge, demonstrating technical skills and problem-solving abilities.",
     color: "#FF6B6B"
   },
   {
     year: 2025,
-    title: "IT Essentials CISCO",
-    description: "Currently studying for Cisco IT Essentials.",
+    title: "Cisco IT Essentials",
+    description: "Currently studying for the Cisco IT Essentials certification.",
     color: "#4A90E2",
     isCurrent: true
   },
   {
     year: 2024,
     title: "Internship at Aguazu – DTC Publicidad",
-    description: "Performed regular maintenance and machinery installations, and contributed to the creation of graphics and websites. Helped install a high-quality, faster printer that improved document output speed by 10%, enhancing overall workflow efficiency.",
+    description: "Performed routine maintenance and machinery installations, contributed to graphic and website development, and helped install a faster, higher-quality printer that boosted document output speed by 10%.",
     color: "#3B82F6"
-  }
-  
-  ,
+  },
   {
     year: 2023,
-    title: "Cambridge B2 English",
+    title: "Cambridge B2 English Certificate",
     score: "158/200",
-    description: "Official English evaluation",
+    description: "Achieved a score of 158/200 on the Cambridge B2 English exam.",
     color: "#00E8A2"
   },
   {
     year: 2023,
-    title: "EF College - New York City",
-    description: "Training program with EF in New York City, where I developed English language proficiency and attended courses",
+    title: "EF College – New York City",
+    description: "Completed an intensive English training program in New York City, enhancing language proficiency and cultural immersion.",
     color: "#6366F1"
   }
 ];

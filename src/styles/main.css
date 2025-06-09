@@ -155,6 +155,26 @@ section {
   overflow: hidden;
 }
 
+/* Overlay semitrasparente */
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Colore #0F172A al 50% di opacità */
+  background: rgba(15, 23, 42, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Contenuti in primo piano */
+#home > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 #home:after {
   content: '';
