@@ -14,6 +14,16 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Anti Brute-Force System',
+      description: 'A personal project designed to protect login forms from brute-force attacks using only the AWS Free Tier. Scalable, easy to integrate, and entirely cloud-based.',
+      image: 'bruteforce.png',
+      tech: ['AWS', 'Node.js', 'CloudWatch', 'Lambda', 'DynamoDB', 'Security'],
+      hostedLink: 'https://drive.google.com/drive/folders/1At5BgwM79JjiaeRWHvShZXnUxXCpirSd',
+      imageStyle: 'webapp-img',
+      bg: '#1a1a1a'
+    },
+    {
+      id: 2,
       title: '"This" E-commerce',
       description: 'A project that utilizes multiple APIs with the goal of creating a complete store.',
       image: 'image4.png',
@@ -24,7 +34,7 @@ const Projects = () => {
       bg: '#222222'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Olicyber stats Readme',
       description: 'Contributed to the development of a card displaying key statistics and insights derived from data obtained from the OliCyber training platform, organizing and structuring the data to create clear and informative visual representations',
       image: 'olicyber.png',
@@ -34,7 +44,7 @@ const Projects = () => {
       bg: '#0d0c16'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Legacy-BLE-Distance-Tracker-Android',
       description: 'An Android project that tracks BLE devices and calculates their distance using RSSI.',
       image: 'image6.png',
@@ -45,7 +55,7 @@ const Projects = () => {
       bg: '#110303'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Tkinter DB Login',
       description: 'A simple Tkinter-based application for database login management.',
       image: 'image2.png',
@@ -56,7 +66,7 @@ const Projects = () => {
       bg: '#0a0a0a'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Aim Trainer',
       description: 'An aim training application built to enhance your accuracy and speed.',
       image: 'image3.png',
@@ -67,7 +77,7 @@ const Projects = () => {
       bg: '#121212'
     }
   ];
-  
+
   const projectsPerSlide = 3;
   const totalSlides = Math.ceil(projects.length / projectsPerSlide);
 
@@ -119,7 +129,7 @@ const Projects = () => {
                     .slice(slideIndex * projectsPerSlide, (slideIndex + 1) * projectsPerSlide)
                     .map((project) => (
                       <div key={project.id} className="project-card">
-                        <div 
+                        <div
                           className={`project-img ${project.imageStyle || ''}`}
                           style={{ backgroundColor: project.bg || '#f5f5f5' }}
                         >
@@ -166,14 +176,16 @@ const Projects = () => {
                                 <FontAwesomeIcon icon={faExternalLinkAlt} /> Watch Video
                               </button>
                             )}
-                            <a
-                              href={project.sourceLink}
-                              className="project-link"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <FontAwesomeIcon icon={faGithub} /> Source Code
-                            </a>
+                            {project.sourceLink && (
+                              <a
+                                href={project.sourceLink}
+                                className="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FontAwesomeIcon icon={faGithub} /> Source Code
+                              </a>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -182,7 +194,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          {}
+
           <div className="carousel-navigation">
             <button
               onClick={prevSlide}
@@ -215,7 +227,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      {}
+
       <VideoModal
         videoUrl={currentVideoUrl}
         isOpen={videoModalOpen}
