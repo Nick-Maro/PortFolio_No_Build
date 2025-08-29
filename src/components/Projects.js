@@ -11,72 +11,82 @@ const Projects = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [currentVideoUrl, setCurrentVideoUrl] = useState('');
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Anti Brute-Force System',
-      description: 'A personal project designed to protect login forms from brute-force attacks using only the AWS Free Tier. Scalable, easy to integrate, and entirely cloud-based.',
-      image: 'bruteforce.png',
-      tech: ['AWS', 'Node.js', 'CloudWatch', 'Lambda', 'DynamoDB', 'Security'],
-      hostedLink: 'https://drive.google.com/drive/folders/1At5BgwM79JjiaeRWHvShZXnUxXCpirSd',
-      imageStyle: 'webapp-img',
-      bg: '#1a1a1a'
-    },
-    {
-      id: 2,
-      title: '"This" E-commerce',
-      description: 'A project that utilizes multiple APIs with the goal of creating a complete store.',
-      image: 'image4.png',
-      tech: ['API Integration', 'E-commerce','Full stack'],
-      hostedLink: 'https://this-ecommerce-store.netlify.app/',
-      sourceLink: 'https://github.com/Nick-Maro/This_Ecommerce_Backend',
-      imageStyle: 'webapp-img',
-      bg: '#222222'
-    },
-    {
-      id: 3,
-      title: 'Olicyber stats Readme',
-      description: 'Contributed to the development of a card displaying key statistics and insights derived from data obtained from the OliCyber training platform, organizing and structuring the data to create clear and informative visual representations',
-      image: 'olicyber.png',
-      tech: ['GitHub','TeamWork'],
-      sourceLink: 'https://github.com/utcq/ocbadge',
-      imageStyle: 'webapp-img',
-      bg: '#0d0c16'
-    },
-    {
-      id: 4,
-      title: 'Legacy-BLE-Distance-Tracker-Android',
-      description: 'An Android project that tracks BLE devices and calculates their distance using RSSI.',
-      image: 'image6.png',
-      tech: ['Android', 'BLE', 'RSSI', 'Java'],
-      liveLink: '#',
-      sourceLink: 'https://github.com/Nick-Maro/Legacy-BLE-Distance-Tracker-Android',
-      imageStyle: 'phone-img',
-      bg: '#110303'
-    },
-    {
-      id: 5,
-      title: 'Tkinter DB Login',
-      description: 'A simple Tkinter-based application for database login management.',
-      image: 'image2.png',
-      tech: ['Python', 'Tkinter', 'SQL'],
-      liveLink: 'https://www.youtube.com/embed/S9_eiL_j8bU',
-      sourceLink: 'https://github.com/Nick-Maro/Tkinter_Db_Login',
-      imageStyle: 'video-img',
-      bg: '#0a0a0a'
-    },
-    {
-      id: 6,
-      title: 'Aim Trainer',
-      description: 'An aim training application built to enhance your accuracy and speed.',
-      image: 'image3.png',
-      tech: ['Python', 'GUI'],
-      liveLink: 'https://www.youtube.com/embed/FgzX8SddStQ',
-      sourceLink: 'https://github.com/Nick-Maro/Aimtrainer',
-      imageStyle: 'video-img',
-      bg: '#121212'
-    }
-  ];
+const projects = [
+  {
+    id: 1,
+    title: 'DockerChat',
+    description: 'A secure, end-to-end encrypted chat application deployed with Docker. Designed to demonstrate networking, containerization, and secure communication practices.',
+    image: 'dockerchat.png', 
+    tech: ['Docker', 'Preact', 'Bun','WebSockets', 'Security', 'Full Stack'],
+    sourceLink: 'https://github.com/Nick-Maro/DockerChat',
+    imageStyle: 'webapp-img',
+    bg: '#ffffffff'
+  },
+  {
+    id: 2,
+    title: 'Anti Brute-Force System',
+    description: 'A personal project designed to protect login forms from brute-force attacks using only the AWS Free Tier. Scalable, easy to integrate, and entirely cloud-based.',
+    image: 'bruteforce.png',
+    tech: ['AWS', 'Node.js', 'CloudWatch', 'Lambda', 'DynamoDB', 'Security'],
+    hostedLink: 'https://drive.google.com/drive/folders/1At5BgwM79JjiaeRWHvShZXnUxXCpirSd',
+    imageStyle: 'webapp-img',
+    bg: '#1a1a1a'
+  },
+  {
+    id: 3,
+    title: '"This" E-commerce',
+    description: 'A project that utilizes multiple APIs with the goal of creating a complete store.',
+    image: 'image4.png',
+    tech: ['API Integration', 'E-commerce','Full stack'],
+    hostedLink: 'https://this-ecommerce-store.netlify.app/',
+    sourceLink: 'https://github.com/Nick-Maro/This_Ecommerce_Backend',
+    imageStyle: 'webapp-img',
+    bg: '#222222'
+  },
+  {
+    id: 4,
+    title: 'Olicyber stats Readme',
+    description: 'Contributed to the development of a card displaying key statistics and insights derived from data obtained from the OliCyber training platform, organizing and structuring the data to create clear and informative visual representations',
+    image: 'olicyber.png',
+    tech: ['GitHub','TeamWork'],
+    sourceLink: 'https://github.com/utcq/ocbadge',
+    imageStyle: 'webapp-img',
+    bg: '#0d0c16'
+  },
+  {
+    id: 5,
+    title: 'Legacy-BLE-Distance-Tracker-Android',
+    description: 'An Android project that tracks BLE devices and calculates their distance using RSSI.',
+    image: 'image6.png',
+    tech: ['Android', 'BLE', 'RSSI', 'Java'],
+    liveLink: '#',
+    sourceLink: 'https://github.com/Nick-Maro/Legacy-BLE-Distance-Tracker-Android',
+    imageStyle: 'phone-img',
+    bg: '#110303'
+  },
+  {
+    id: 6,
+    title: 'Tkinter DB Login',
+    description: 'A simple Tkinter-based application for database login management.',
+    image: 'image2.png',
+    tech: ['Python', 'Tkinter', 'SQL'],
+    liveLink: 'https://www.youtube.com/embed/S9_eiL_j8bU',
+    sourceLink: 'https://github.com/Nick-Maro/Tkinter_Db_Login',
+    imageStyle: 'video-img',
+    bg: '#0a0a0a'
+  },
+  {
+    id: 7,
+    title: 'Aim Trainer',
+    description: 'An aim training application built to enhance your accuracy and speed.',
+    image: 'image3.png',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    liveLink: 'https://www.youtube.com/embed/FgzX8SddStQ',
+    sourceLink: 'https://github.com/Nick-Maro/Aimtrainer',
+    imageStyle: 'video-img',
+    bg: '#121212'
+  }
+];
 
   const projectsPerSlide = 3;
   const totalSlides = Math.ceil(projects.length / projectsPerSlide);
